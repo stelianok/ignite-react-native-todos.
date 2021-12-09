@@ -9,7 +9,13 @@ export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   function handleAddTask(newTaskTitle: string) {
-    //TODO - add new task
+    const task: Task = {
+      id: Number(new Date().getTime()),
+      title: newTaskTitle,
+      done: false,
+    }
+
+    setTasks(oldState => [...oldState, task]);
   }
 
   function handleToggleTaskDone(id: number) {
@@ -26,10 +32,10 @@ export function Home() {
 
       <TodoInput addTask={handleAddTask} />
 
-      <TasksList 
-        tasks={tasks} 
+      <TasksList
+        tasks={tasks}
         toggleTaskDone={handleToggleTaskDone}
-        removeTask={handleRemoveTask} 
+        removeTask={handleRemoveTask}
       />
     </View>
   )
