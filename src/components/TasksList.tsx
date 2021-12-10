@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
     height: 16,
     width: 16,
     borderRadius: 4,
-    marginRight: 15,
     backgroundColor: '#1DB863',
     alignItems: 'center',
     justifyContent: 'center'
@@ -108,6 +107,7 @@ const styles = StyleSheet.create({
   taskTextDone: {
     color: '#1DB863',
     textDecorationLine: 'line-through',
-    fontFamily: 'Inter-Medium'
+    fontFamily: 'Inter-Medium',
+    marginLeft: 15,
   }
-})
+});
