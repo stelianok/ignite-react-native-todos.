@@ -44,11 +44,12 @@ export function TasksList({ tasks, toggleTaskDone, removeTask }: TasksListProps)
                       name="check"
                       size={12}
                       color="#FFF"
+                      style={styles.taskMarkerDone}
                     />
                   )}
                 </View>
 
-                <Text style={styles.taskText}>
+                <Text style={item.done ? styles.taskTextDone : styles.taskText}>
                   {item.title}
                 </Text>
               </TouchableOpacity>
