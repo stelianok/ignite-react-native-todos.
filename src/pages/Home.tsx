@@ -27,6 +27,16 @@ export function Home() {
 
   }
 
+  function handleEditTask(id: number, taskNewTitle: string) {
+    const updatedTasks: Task[] = tasks.map((task) => {
+      if (task.id === id) {
+        task.title = taskNewTitle;
+      }
+      return task;
+    });
+
+    setTasks(updatedTasks);
+  }
   function handleToggleTaskDone(id: number) {
     const updatedTasks: Task[] = tasks.map((task) => {
       if (task.id === id) {
